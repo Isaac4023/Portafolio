@@ -1,27 +1,38 @@
 body {
-    background-color: #f0f0f0;  /* fondo gris claro para toda la página */
-    font-family: Arial, sans-serif;  /* fuente básica, nada fancy */
+    background-color: #e9f5ff;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #tarjeta {
-    box-sizing: border-box;  /* clave: incluye padding y border en el width */
-    border: 2px solid #999;  /* borde más grueso para ver Box Model */
-    padding: 30px 20px;  /* padding asimétrico: más arriba/abajo */
-    margin: 60px auto;  /* más margin para espacio exterior */
+    box-sizing: border-box;
+    width: 350px;
+    padding: 40px 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.titulo {  /* selector por clase */
-    color: #333;  /* color gris oscuro */
-    text-align: center;  /* alineado al centro */
-}
-
-p {
-    margin: 0;  /* quito margin default del p para control Box Model */
-    padding: 10px;  /* padding en párrafo para demo */
+.titulo {
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 img {
-    border: 1px dashed #ddd;  /* borde dashed en imagen para demo Box Model */
-    padding: 5px;  /* padding alrededor de la imagen */
-    margin-bottom: 15px;  /* margin inferior para separar de texto */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
 }
