@@ -33,6 +33,21 @@ img {
 }
 
 p {
-    color: #555;
-    line-height: 1.6;
+    color: #777 !important;  /* fuerza este color aunque haya otros */
+}
+
+h2 {
+    color: red;  /* no se ve, pierde contra la clase */
+}
+
+.titulo {
+    color: #2980b9;
+}
+
+#tarjeta h2 {  
+    color: #16a085;  /* gana por especificidad mayor */
+}
+
+img {
+    border-color: orange;  /* sobreescribe el azul anterior */
 }
