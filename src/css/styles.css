@@ -11,13 +11,13 @@ body {
 #tarjeta {
     box-sizing: border-box;
     width: 350px;
-    padding: 100px 30px 40px;  /* mucho padding arriba para que la foto sobresalga */
+    padding: 100px 30px 40px; 
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-    /* quitamos overflow: hidden para que la foto pueda salir */
+
 }
 
 .titulo {
@@ -46,7 +46,6 @@ p {
     font-size: 1.1em;
 }
 
-/* footer fixed pequeño */
 body::after {
     content: "Hecho por Manuel © 2025";
     position: fixed;
@@ -58,23 +57,26 @@ body::after {
     padding: 5px 10px;
     border-radius: 5px;
 }
-/* Pruebas de cascada y especificidad */
-p {
-    color: #777 !important;  /* fuerza este color aunque haya otros */
+#habilidades {
+    margin-top: 80px;
+    text-align: center;
 }
 
-h2 {
-    color: red;  /* no se ve, pierde contra la clase */
+#habilidades h3 {
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-.titulo {
-    color: #2980b9;
+.contenedor-flex {
+    display: flex;  /* activamos Flexbox */
+    gap: 20px;      /* espacio entre items */
+    padding: 0 20px;
 }
 
-#tarjeta h2 {  
-    color: #16a085;  /* gana por especificidad mayor */
-}
-
-img {
-    border-color: orange;  /* sobreescribe el azul anterior */
+.skill {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: bold;
 }
