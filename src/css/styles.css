@@ -80,3 +80,22 @@ body::after {
     border-radius: 10px;
     font-weight: bold;
 }
+.contenedor-flex {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    flex-direction: row;     /* eje principal horizontal (default, pero lo pongo explícito) */
+    justify-content: center; /* alinea en eje principal: centro */
+    align-items: center;     /* alinea en eje cruzado: centro vertical */
+    flex-wrap: wrap;         /* si no caben, bajan a otra línea (responsive) */
+}
+
+.skill {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    flex: 1;                 /* cada skill toma el mismo espacio disponible */
+    min-width: 120px;        /* para que no se achiquen mucho en móvil */
+}
