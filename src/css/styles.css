@@ -3,12 +3,11 @@ body {
     font-family: Arial, sans-serif;  /* fuente básica, nada fancy */
 }
 
-#tarjeta {  /* selector por id */
-    width: 300px;  /* ancho fijo para la tarjeta */
-    margin: 50px auto;  /* centrado con margin, 50px arriba/abajo */
-    padding: 20px;  /* padding interno para espacio */
-    background-color: white;  /* fondo blanco para contrastar */
-    border: 1px solid #ccc;  /* borde simple */
+#tarjeta {
+    box-sizing: border-box;  /* clave: incluye padding y border en el width */
+    border: 2px solid #999;  /* borde más grueso para ver Box Model */
+    padding: 30px 20px;  /* padding asimétrico: más arriba/abajo */
+    margin: 60px auto;  /* más margin para espacio exterior */
 }
 
 .titulo {  /* selector por clase */
@@ -16,13 +15,13 @@ body {
     text-align: center;  /* alineado al centro */
 }
 
-p {  /* selector por elemento */
-    color: #666;  /* color más claro para texto */
-    text-align: justify;  /* justificado para que se vea pro */
+p {
+    margin: 0;  /* quito margin default del p para control Box Model */
+    padding: 10px;  /* padding en párrafo para demo */
 }
 
 img {
-    display: block;  /* para centrar la imagen */
-    margin: 0 auto;  /* centrado horizontal */
-    width: 150px;  /* tamaño fijo */
+    border: 1px dashed #ddd;  /* borde dashed en imagen para demo Box Model */
+    padding: 5px;  /* padding alrededor de la imagen */
+    margin-bottom: 15px;  /* margin inferior para separar de texto */
 }
