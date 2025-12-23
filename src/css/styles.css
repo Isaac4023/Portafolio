@@ -4,6 +4,7 @@ body {
     margin: 0;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;     /* cambio importante: columna para que quepan tarjeta + habilidades */
     justify-content: center;
     align-items: center;
 }
@@ -11,17 +12,16 @@ body {
 #tarjeta {
     box-sizing: border-box;
     width: 350px;
-    padding: 100px 30px 40px; 
+    padding: 100px 30px 40px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-
 }
 
 .titulo {
-    color: #16a085;  /* el que gana por especificidad */
+    color: #16a085;
     margin: 0 0 20px 0;
     font-size: 1.8em;
 }
@@ -31,10 +31,10 @@ img {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid white;  /* borde blanco para separar de fondo */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);  /* sombra suave en la foto */
+    border: 6px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     position: absolute;
-    top: -80px;     /* la sacamos más arriba */
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -57,6 +57,7 @@ body::after {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
 #habilidades {
     margin-top: 80px;
     text-align: center;
@@ -68,26 +69,13 @@ body::after {
 }
 
 .contenedor-flex {
-    display: flex;  /* activamos Flexbox */
-    gap: 20px;      /* espacio entre items */
-    padding: 0 20px;
-}
-
-.skill {
-    background-color: #3498db;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-.contenedor-flex {
     display: flex;
     gap: 20px;
-    padding: 0 20px;
-    flex-direction: row;     /* eje principal horizontal (default, pero lo pongo explícito) */
-    justify-content: center; /* alinea en eje principal: centro */
-    align-items: center;     /* alinea en eje cruzado: centro vertical */
-    flex-wrap: wrap;         /* si no caben, bajan a otra línea (responsive) */
+    padding: 0 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill {
@@ -96,6 +84,7 @@ body::after {
     padding: 15px 25px;
     border-radius: 10px;
     font-weight: bold;
-    flex: 1;                 /* cada skill toma el mismo espacio disponible */
-    min-width: 120px;        /* para que no se achiquen mucho en móvil */
+    flex: 1;                 /* crecen para llenar espacio */
+    min-width: 120px;
+    text-align: center;
 }
