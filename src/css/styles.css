@@ -88,3 +88,12 @@ body::after {
     min-width: 120px;
     text-align: center;
 }
+
+.skill:nth-child(3) {  
+    align-self: flex-start; 
+    order: -1;             
+}
+
+.skill:nth-child(5) {  
+    align-self: flex-end;
+}
