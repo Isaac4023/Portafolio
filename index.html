@@ -9,18 +9,24 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-contenido">
-            <h2>Manuel Isaac</h2>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-            </ul>
-        </div>
-    </nav>
-
+<nav class="navbar">
+    <div class="navbar-contenido">
+        <h2>Manuel Isaac</h2>
+    
+        <button id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+        </ul>
+    </div>
+</nav>
     <main id="inicio">
 
         <div id="tarjeta">
@@ -76,5 +82,6 @@
         <p>Usamos cookies para mejorar tu experiencia. <a href="#">Más info</a></p>
         <button>Aceptar</button>
     </div>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

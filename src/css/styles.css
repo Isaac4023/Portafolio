@@ -1,3 +1,4 @@
+@media (min-width: 1024px) {
 body {
     background-color: #e9f5ff;
     font-family: Arial, sans-serif;
@@ -222,6 +223,7 @@ body::after {
 .skill {
     flex-basis: 20%;  
     min-width: 150px; 
+}
 }
 
 @media (max-width: 768px) {
