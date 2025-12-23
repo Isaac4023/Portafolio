@@ -12,7 +12,7 @@ Crear un portafolio personal profesional practicando los fundamentos del desarro
 
 ## 🖥️ Vista previa
 
-![Vista desktop del portafolio](https://imgur.com/a/jo4hjN2)
+Vista desktop del portafolio https://imgur.com/a/jo4hjN2
 *(En móvil se transforma con menú hamburguesa y layout en columna)*
 
 ## ✨ Características
