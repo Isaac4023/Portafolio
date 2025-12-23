@@ -56,18 +56,6 @@ p {
     font-size: 1.1em;
 }
 
-body::after {
-    content: "Hecho por Manuel © 2025";
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 12px;
-    color: #aaa;
-    background: rgba(255,255,255,0.7);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
 #habilidades {
     margin-top: 100px;  
     text-align: center;
@@ -212,6 +200,23 @@ body::after {
     cursor: pointer;
     font-size: 1em;
 }
+.cookie-banner {
+    /* No display: none por defecto, el JS lo controla */
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
 .contenedor-flex {
     display: flex;
     flex-wrap: wrap;
@@ -226,7 +231,7 @@ body::after {
 }
 
 #navToggle {
-    display: none; 
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -347,4 +352,12 @@ body::after {
         text-align: center;
     }
     
+}
+@media (max-width: 480px) {
+    .cookie-buttons {
+        flex-direction: column;
+    }
+    .btn-primary {
+        width: 100%;
+    }
 }

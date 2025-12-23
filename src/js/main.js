@@ -14,3 +14,26 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAccept = document.getElementById('cookieAccept');
+    const cookieReject = document.getElementById('cookieReject');
+
+    if (cookieBanner && cookieAccept && cookieReject) {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieBanner.style.display = 'flex';
+        } else {
+            cookieBanner.style.display = 'none';
+        }
+
+        function hideCookieBanner() {
+            cookieBanner.style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        cookieAccept.addEventListener('click', hideCookieBanner);
+        cookieReject.addEventListener('click', hideCookieBanner);
+    }
+});

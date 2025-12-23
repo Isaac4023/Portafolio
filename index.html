@@ -77,11 +77,17 @@
         <p>© 2025 Manuel Isaac Delgado López. Todos los derechos reservados.</p>
     </footer>
 
-
-    <div class="cookie-banner">
-        <p>Usamos cookies para mejorar tu experiencia. <a href="#">Más info</a></p>
-        <button>Aceptar</button>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
+    <div class="cookie-content">
+        <p>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas su uso. 
+            <a href="privacidad.html">Más información</a>
+        </p>
+        <div class="cookie-buttons">
+            <button id="cookieReject">Rechazar</button>
+            <button id="cookieAccept" class="btn-primary">Aceptar</button>
+        </div>
     </div>
+</div>
     <script src="src/js/main.js"></script>
 </body>
 </html>
