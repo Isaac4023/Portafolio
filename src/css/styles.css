@@ -1,18 +1,28 @@
 body {
     background-color: #e9f5ff;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;     /* cambio importante: columna para que quepan tarjeta + habilidades */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+main {
+    max-width: 900px;  
+    margin-top: 120px; 
+    padding: 0 20px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 }
 
 #tarjeta {
     box-sizing: border-box;
-    width: 350px;
-    padding: 100px 30px 40px;
+    width: 100%;  
+    max-width: 1000px;
+    padding: 100px 40px 40px; 
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -21,28 +31,27 @@ body {
 }
 
 .titulo {
-    color: #16a085;
+    color: #000000;
     margin: 0 0 20px 0;
     font-size: 1.8em;
 }
 
 img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid white;
+    border: 6px solid #3498db;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    position: absolute;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: -100px;  
+    margin-bottom: -80px;  
 }
 
 p {
     color: #555;
     line-height: 1.6;
-    margin: 0;
+    margin: 0 0 15px;
     font-size: 1.1em;
 }
 
@@ -59,8 +68,9 @@ body::after {
 }
 
 #habilidades {
-    margin-top: 80px;
+    margin-top: 100px;  
     text-align: center;
+    width: 100%;
 }
 
 #habilidades h3 {
@@ -70,12 +80,10 @@ body::after {
 
 .contenedor-flex {
     display: flex;
-    gap: 20px;
-    padding: 0 40px;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .skill {
@@ -85,13 +93,12 @@ body::after {
     border-radius: 10px;
     font-weight: bold;
     min-width: 120px;
-    flex-grow: 1;    /* todos crecen para llenar espacio disponible */
-    flex-shrink: 1;  /* se achican si hace falta */
-    flex-basis: 0;   /* base igual para que crezcan parejo */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
     text-align: center;
 }
 
-/* Navbar fija */
 .navbar {
     position: fixed;
     top: 0;
@@ -99,12 +106,12 @@ body::after {
     width: 100%;
     background-color: #2c3e50;
     color: white;
-    z-index: 1000;  /* encima de todo */
+    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar-contenido {
-    max-width: 1200px;
+    max-width: 100%; 
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
@@ -114,7 +121,7 @@ body::after {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     list-style: none;
     margin: 0;
 }
@@ -129,15 +136,10 @@ body::after {
     color: #3498db;
 }
 
-/* Ajuste porque navbar es fixed */
-main {
-    margin-top: 80px;  /* espacio para que no tape la tarjeta */
-}
-
-/* Info extra y redes en tarjeta */
-.info-extra {
-    margin: 20px 0;
-    color: #555;
+.subtitulo {
+    color: #3498db;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 .redes {
@@ -149,18 +151,24 @@ main {
 
 .redes a {
     color: #3498db;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.btn-contacto {
-    background-color: #16a085;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
+.exp-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+.exp-item a {
+    color: #3498db;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 /* Footer */
@@ -168,19 +176,9 @@ main {
     background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 100px;
-}
-
-.redes-footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.redes-footer a {
-    color: white;
+    padding: 30px;
+    margin-top: auto;  /* lo empuja al fondo */
+    width: 100%;
 }
 
 /* Cookie banner */
@@ -191,18 +189,37 @@ main {
     width: 100%;
     background-color: #333;
     color: white;
-    padding: 15px 20px;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     z-index: 999;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 1em;
 }
 
 .cookie-banner button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 10px 25px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+}
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.skill {
+    flex-basis: 20%;  /* 4 por fila en PC grande */
+    min-width: 150px;  /* evita achicarse mucho */
 }
