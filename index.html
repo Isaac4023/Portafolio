@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Isaac Delgado López</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-contenido">
+        <h2>Manuel Isaac</h2>
+    
+        <button id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+        </ul>
+    </div>
+</nav>
+    <main id="inicio">
+
+        <div id="tarjeta">
+            <img src="src/images/yo.jpg" alt="Foto de Manuel Isaac Delgado López">
+            <h2 class="titulo">MANUEL ISAAC DELGADO LÓPEZ</h2>
+            <p class="subtitulo">Estudiante de Ingeniería en Desarrollo y Gestión de Software</p>
+            <p>AGS, Ags MX | (52) 449-606-42-09 | st4023@utr.edu.mx</p>
+            
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/manuel-isaac-delgado-lopez-55b200279">LinkedIn</a>
+                <a href="https://github.com/CRazy8py">GitHub</a>
+            </div>
+
+            <div id="sobre" class="seccion">
+                <h3>Sobre mí</h3>
+                <p>I am a committed, responsible and enthusiastic person. I consider myself a quick learner, a team player and I always look forward to learn new things and improve my skills. Currently looking for an internship opportunity.</p>
+            </div>
+        </div>
+
+
+        <section id="habilidades" class="seccion">
+            <h3>Mis Habilidades</h3>
+            <div class="contenedor-flex">
+                <div class="skill">Python</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">HTML5</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">Java</div>
+                <div class="skill">React</div>
+                <div class="skill">Git</div>
+                <div class="skill">Arduino</div>
+            </div>
+        </section>
+
+
+        <section id="experiencia" class="seccion">
+            <h3>Experiencia Destacada</h3>
+            <div class="exp-item">
+                <h4>Mejora de Infraestructura de Red Universitaria (2023)</h4>
+                <p>Proyecto para actualizar la red local en Universidad Tecnológica El Retoño: análisis, diseño de IPs, simulación en Cisco Packet Tracer, implementación de DHCP y VLANs para mayor seguridad y eficiencia.</p>
+                <a href="https://drive.google.com/drive/folders/1NLlk7_iUxJ29enbtXRj0PJ1vDhE3xfZ5">Ver proyecto</a>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2025 Manuel Isaac Delgado López. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
+    <div class="cookie-content">
+        <p>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas su uso. 
+            <a href="privacidad.html">Más información</a>
+        </p>
+        <div class="cookie-buttons">
+            <button id="cookieReject">Rechazar</button>
+            <button id="cookieAccept" class="btn-primary">Aceptar</button>
+        </div>
+    </div>
+</div>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
